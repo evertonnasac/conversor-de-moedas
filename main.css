@@ -1,3 +1,9 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+
 body{
     background-image: linear-gradient(90deg, rgb(28,195,8), rgb(140,208,132) );
     font-family: Helvetica, sans-serif;
@@ -22,8 +28,8 @@ input{
     position: absolute;
     height: 30px;
     bottom: 10px;
-    width: 25%;
-    border: none;
+    width: 50%;
+    border: solid 2px;
     left: 50%;
     transform: translateX(-50%); 
     text-align: center;
@@ -38,19 +44,18 @@ img{
     max-height: 100%;
 }
 
+p {
+    text-align: center;
+    color: aliceblue;
+    font-size: large;
+}
 
 .conversion-rate{
     margin-top: 50px;
     width: 300px;
     position: relative;
-    left : 50%;
-    transform: translate(-50%);
-    color: aliceblue;
-    font-size: large;
-   
-    
+ 
 }
-
 
 .value-currency-two{
     position: absolute;
@@ -59,20 +64,25 @@ img{
     transform: translateX(-50%);
     font-size: 20px;
     margin-bottom: 5px;
+    color: black;
 }
 
 
 .content{
-    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 auto;
        
 }
 
 .painel-currency{
     display: flex;
+    width: 100vw;
     flex-direction: row;
     justify-content:space-evenly;
-    margin-top: 50px;
+    margin: 50px 0px 50px
+    
     
 }
 
@@ -103,9 +113,24 @@ img{
     width: 75px;
     height: 75px;
     transform-style: preserve-3d;
-    transition: all .5s ease-in-out;
+    transition: .5s ease-in-out;
 }
 
 .image-rotate{
     transform: rotateY(360deg);
+}
+
+@media (max-width: 960px){
+    .painel-currency {
+        flex-direction: column;
+        align-items: center;
+        max-width: 500px;
+        margin-top: 50px;
+        
+
+    }
+
+    .image{
+        top: 0;
+    }
 }
